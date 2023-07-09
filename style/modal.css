@@ -1,0 +1,93 @@
+/* Estratágia para que o modal cubra toda a página*/
+
+#modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: #0e0a14ef;
+
+  /*Para ele subir para cima do outro conteúdo*/
+  position: fixed;
+  top: 0;
+
+  /*Configurando o layout*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 400ms;
+}
+
+/*Para quando o modal não estiver aparecendo (quando tiver com a classe hide) Primeiro você configura no css e depois o java script coloca e retira a class*/
+#modal.hide{
+display: none;
+
+}
+#modal .content {
+  color: white;
+
+  width: 42rem;
+}
+
+#modal .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4.8rem;
+}
+
+#modal .header a {
+  background-image: url(../assets/x.svg);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+
+  /* Vamos ocultar o nome fechar dessa tag a, porque ela é importante para a acessibilidade*/
+  font-size: 0.01px;
+}
+
+#modal .header h1 {
+  color: white;
+
+  font-size: 3.6rem;
+  line-height: 4.2rem;
+}
+
+#modal form label {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  /*Para forçar que ele fique em linha, na linha toda e poder mexer na margim bottom dele (sem o display block, não podemos usar o margin) */
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+#modal form .field {
+  display: flex;
+}
+
+#modal form input {
+  /*O flex 1 faz com ele pegue todo o espaço que sobre da caixa para ele*/
+  flex: 1;
+
+  background-color: #f0f0f5;
+  border-radius: 0.8rem 0 0 .8rem;
+  border: 0;
+
+  padding: 1.6rem 2.4rem;
+
+  font-size: 1.6rem;
+  color: #6c6c80;
+}
+
+#modal form button {
+  width: 7.2rem;
+  height: 7.2rem;
+
+  background-color: var(--primary-color);
+
+  border: 0;
+  border-radius: 0 .8rem .8rem 0;
+}
+
+#modal form button:hover {
+background-color: #2fb86e;
+}

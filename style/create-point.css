@@ -1,0 +1,179 @@
+#page-create-point{
+  width: 90%;
+  max-width: 110rem;
+
+  margin: 0 auto; 
+
+}
+
+#page-create-point header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.8rem;
+}
+
+#page-create-point a{
+  color: var(--title-color);
+
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  
+  font-size: 1.2rem;
+  
+}
+
+#page-create-point header span{
+  width: 2rem;
+  height: 2.3rem;
+  display: flex;
+  background-image: url(../assets/arrow-left.svg);
+}
+
+form{
+  background-color: white;
+  padding: 6.4rem;
+  border-radius: .8rem;
+  margin-top: 8rem;
+
+  max-width: 73rem;
+
+  /*alinhamento ao centro pelo lado de fora da caixa(dentro é o flex)*/
+  margin: 8rem auto;
+}
+
+form h1{
+  font-size: 3.6rem;
+}
+
+form fieldset{
+  margin-top: 6.4rem;
+  border: 0;
+}
+
+form legend{
+  margin-bottom: 4rem;
+}
+
+form legend h2{
+  font-size: 2.4rem;
+}
+
+form .field{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  margin-bottom: 2.4rem;
+}
+
+form .field-group{
+  display: flex;
+  
+}
+
+form input,
+form select{
+  background-color:#f0f0f5;
+  border: 0;
+  padding: 1.6rem 2.4rem;
+  font-size: 1.6rem;
+
+  border-radius: .8rem;
+  /* Retira a linha preta quando o usuário clica no campo
+  
+  outline: none;*/
+}
+
+form select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+form label{
+  font-size: 1.4rem;
+  margin-bottom: .8rem;
+}
+
+form .field-group .field + .field{
+  margin-left: 2.4rem;
+}
+
+form button{
+  width: 26rem;
+  height: 5.6rem;
+
+  background-color: var(--primary-color);
+
+  border-radius: .8rem;
+
+  color:white;
+
+  font-weight: bold;
+  font-size: 1.6rem;
+
+  border: 0;
+
+  margin-top: 4rem;
+
+  transition: backgroud-color 400ms;
+}
+
+form button:hover{
+  background-color: #2fb86e;
+}
+
+.items-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.6rem;
+}
+
+.items-grid li{
+  background-color: #f5f5f5;
+  list-style: none;
+
+  border: .2rem solid #f5f5f5;
+  border-radius: .8rem;
+
+  height: 18rem;
+
+  padding: 3.2rem 2.4rem 1.6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.items-grid li span{
+  flex:1;
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+
+  color: var(--title-color);
+
+  margin-top: 1.2rem;
+}
+
+.items-grid li.selected{
+background-color: #e1faec;
+border: .2rem solid #34cb79;
+}
+
+/*Aqui colocamos isso para que no evento  click, no js, a img e o span não seja clicado quando for fazer a parte dos itens selecionados*/
+.items-grid li img,
+.items-grid li span{
+  pointer-events: none;
+}
